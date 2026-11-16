@@ -1,0 +1,2794 @@
+# MASTER DEVELOPMENT PROMPT
+# OPTICAL STORE MANAGEMENT ERP
+## Complete Optical Retail, POS, Prescription, Lens Laboratory, Inventory & Business Management Software
+### Laravel + PHP + MySQL | Production-Ready Enterprise Application
+
+---
+
+# 1. PROJECT OVERVIEW
+
+Act as a senior Laravel software architect, optical retail business consultant, optometry workflow specialist, inventory management expert, POS developer, database architect, and enterprise UI/UX designer.
+
+Your task is to design and develop a complete, production-ready Optical Store Management ERP using Laravel, PHP, and MySQL.
+
+This must be a complete business management system for optical stores, not simply a billing or inventory application.
+
+The software must manage the complete optical retail lifecycle:
+
+Customer Registration → Eye Prescription → Eye Measurements → Frame Selection → Lens Selection → Quotation → Order Creation → Lens Processing → Quality Control → Fitting → Final Billing → Delivery → Warranty → After-Sales Service.
+
+The application should support:
+
+1. Independent optical retail shops.
+2. Multi-branch optical chains.
+3. Spectacle stores.
+4. Contact lens retailers.
+5. Prescription eyewear businesses.
+6. Sunglasses retailers.
+7. Lens laboratories.
+8. Optical wholesalers.
+9. Optical distributors.
+10. Optical manufacturers.
+11. Optometry clinics attached to optical stores.
+12. Online eyewear businesses.
+
+Primary market: India.
+
+Design the software to support Indian retail billing, GST configuration, barcode inventory, supplier management, customer prescriptions, and multi-branch operations.
+
+# 2. TECHNOLOGY STACK
+
+| Component | Technology |
+|---|---|
+| Backend | Latest stable Laravel |
+| Programming Language | PHP 8.3+ |
+| Database | MySQL 8+ |
+| Frontend | Laravel Blade |
+| Interactive UI | Livewire |
+| CSS | Tailwind CSS |
+| JavaScript | Alpine.js |
+| Charts | Chart.js |
+| Authentication | Laravel Authentication |
+| Authorization | Role-Based Access Control |
+| PDF Generation | DomPDF or compatible library |
+| Excel | Laravel Excel |
+| Barcode | Barcode generation library |
+| QR Code | QR code library |
+| Queue | Laravel Queue |
+| Cache | Redis where available |
+| API | Laravel REST API |
+| Version Control | Git |
+
+Use stable and compatible dependencies.
+
+The application must be deployable on a standard Linux VPS using Nginx or Apache.
+
+# 3. APPLICATION ARCHITECTURE
+
+Develop a modular, scalable, SaaS-ready application.
+
+Support:
+
+- Multiple companies.
+- Multiple optical stores.
+- Multiple branches.
+- Multiple warehouses.
+- Multiple counters.
+- Multiple optical laboratories.
+- Multiple suppliers.
+- Multiple employees.
+- Multiple price lists.
+- Multiple currencies if enabled.
+
+Every business record must be associated with the appropriate company and branch.
+
+Implement strict company-level data isolation and branch-level access control.
+
+# 4. MAIN APPLICATION NAVIGATION
+
+Create the following sidebar navigation.
+
+1. Dashboard
+2. POS / Sales
+3. Quotations
+4. Sales Orders
+5. Prescription Management
+6. Eye Measurements
+7. Customers
+8. Frame Management
+9. Lens Management
+10. Contact Lens Management
+11. Sunglasses
+12. Accessories
+13. Optical Inventory
+14. Lens Processing
+15. Laboratory Management
+16. Order Tracking
+17. Repairs & Adjustments
+18. Returns & Exchanges
+19. Warranty Management
+20. Suppliers
+21. Purchase Orders
+22. Goods Received
+23. Stock Transfers
+24. Stock Adjustments
+25. Barcode Management
+26. Expenses
+27. Payments
+28. Accounting
+29. Employee Management
+30. Reports & Analytics
+31. Notifications
+32. Branch Management
+33. User Management
+34. Website / Online Store
+35. Settings
+
+Use permission-based navigation.
+
+# 5. COMPANY AND BRANCH MANAGEMENT
+
+## 5.1 Company Profile
+
+Fields:
+
+- Company name.
+- Logo.
+- Business registration number.
+- PAN.
+- GSTIN.
+- Contact number.
+- Email.
+- Website.
+- Registered address.
+- State.
+- City.
+- PIN code.
+- Bank details.
+- Financial year.
+- Currency.
+- Invoice prefix.
+- Quotation prefix.
+- Purchase order prefix.
+- Sales order prefix.
+
+## 5.2 Branch Management
+
+Fields:
+
+- Branch name.
+- Branch code.
+- Address.
+- Contact number.
+- Email.
+- Branch manager.
+- GSTIN.
+- Operating hours.
+- Store type.
+- Assigned employees.
+- Inventory location.
+- Status.
+
+Features:
+
+- Branch-wise sales.
+- Branch-wise inventory.
+- Branch-wise revenue.
+- Branch-wise expenses.
+- Branch-wise profitability.
+- Branch-wise customer records.
+- Branch-wise prescription history.
+- Branch-wise stock transfers.
+
+## 5.3 Warehouse Management
+
+Support:
+
+- Main warehouse.
+- Store warehouse.
+- Lens laboratory.
+- Damaged stock.
+- Returned stock.
+- Reserved stock.
+- Quarantine stock.
+
+Track inventory across all locations.
+
+# 6. USER MANAGEMENT AND ROLE-BASED ACCESS CONTROL
+
+Create a complete user management system.
+
+## 6.1 Default Roles
+
+1. Super Administrator.
+2. Company Owner.
+3. Store Manager.
+4. Branch Manager.
+5. Optometrist.
+6. Optician.
+7. Sales Executive.
+8. Cashier.
+9. Inventory Manager.
+10. Purchase Manager.
+11. Laboratory Technician.
+12. Lens Processing Technician.
+13. Accountant.
+14. Customer Support Executive.
+15. Warehouse Manager.
+16. Auditor.
+17. Customer.
+
+Allow administrators to create custom roles.
+
+## 6.2 Permission Management
+
+Control access to:
+
+- Customer records.
+- Prescription records.
+- Eye measurements.
+- Sales.
+- Discounts.
+- Refunds.
+- Inventory.
+- Purchase orders.
+- Stock adjustments.
+- Lens processing.
+- Order delivery.
+- Supplier information.
+- Financial reports.
+- Employee records.
+- Customer documents.
+
+Prescription and customer information must only be accessible to authorized users.
+
+Maintain audit logs for sensitive changes.
+
+# 7. CUSTOMER MANAGEMENT
+
+Create a complete customer CRM.
+
+## 7.1 Customer Registration
+
+Fields:
+
+- Customer ID.
+- Customer type.
+- Full name.
+- Photograph.
+- Mobile number.
+- Alternate mobile.
+- Email.
+- Date of birth.
+- Gender.
+- Address.
+- City.
+- State.
+- PIN code.
+- Occupation.
+- Customer source.
+- Preferred branch.
+- Customer category.
+- Notes.
+- Status.
+
+Customer categories:
+
+- Regular.
+- New.
+- VIP.
+- Corporate.
+- Senior Citizen.
+- Child.
+- Wholesale.
+- Referral.
+- Online Customer.
+
+## 7.2 Customer Profile
+
+Display:
+
+- Personal details.
+- Prescription history.
+- Eye examination history.
+- Previous eyewear purchases.
+- Frame preferences.
+- Lens preferences.
+- Contact lens history.
+- Current orders.
+- Pending orders.
+- Sales invoices.
+- Payment history.
+- Outstanding balance.
+- Warranty history.
+- Repairs.
+- Returns.
+- Complaints.
+- Communication history.
+
+## 7.3 Customer Communication
+
+Maintain:
+
+- Phone call logs.
+- WhatsApp communication.
+- SMS.
+- Email.
+- Follow-up notes.
+- Appointment reminders.
+- Warranty reminders.
+- Annual eye checkup reminders.
+- Order delivery notifications.
+
+# 8. PRESCRIPTION MANAGEMENT
+
+This is one of the most important modules.
+
+Build a comprehensive optical prescription management system.
+
+## 8.1 Prescription Registration
+
+Fields:
+
+- Prescription ID.
+- Customer.
+- Prescription date.
+- Optometrist.
+- Prescribing practitioner.
+- Clinic or hospital.
+- Prescription source.
+- Expiry/review date if specified.
+- Prescription document.
+- Notes.
+
+## 8.2 Right Eye and Left Eye Prescription
+
+Capture separate values for:
+
+### Right Eye (OD)
+
+- SPH.
+- CYL.
+- AXIS.
+- ADD.
+- PRISM.
+- Base direction.
+- Near vision.
+- Distance vision.
+- Visual acuity.
+- PD where separately measured.
+
+### Left Eye (OS)
+
+- SPH.
+- CYL.
+- AXIS.
+- ADD.
+- PRISM.
+- Base direction.
+- Near vision.
+- Distance vision.
+- Visual acuity.
+- PD where separately measured.
+
+Support:
+
+- Plus and minus sphere.
+- Plus and minus cylinder.
+- Axis from 0 to 180 degrees.
+- Configurable prism units and base directions.
+- Decimal precision.
+- Configurable measurement units.
+
+Do not treat blank values and zero values as interchangeable.
+
+## 8.3 Prescription Types
+
+- Single Vision.
+- Distance.
+- Reading.
+- Bifocal.
+- Progressive.
+- Occupational.
+- Computer.
+- Safety.
+- Custom.
+
+## 8.4 Prescription Attachments
+
+Allow uploading:
+
+- Prescription image.
+- PDF prescription.
+- Previous prescription.
+- Eye examination report.
+
+## 8.5 Prescription History
+
+Maintain historical prescriptions.
+
+Show:
+
+- Previous prescription.
+- Current prescription.
+- Prescription date.
+- Prescriber.
+- Prescription comparison.
+- Prescription changes.
+
+Never overwrite historical prescription records when a new prescription is entered.
+
+## 8.6 Prescription Validation
+
+Implement configurable validations for:
+
+- Sphere.
+- Cylinder.
+- Axis.
+- Addition.
+- Prism.
+- Required fields.
+- Valid measurement formats.
+
+Flag unusual or incomplete values for human review.
+
+Do not automatically modify prescription values.
+
+The software must not diagnose eye diseases or independently prescribe corrective lenses.
+
+# 9. EYE MEASUREMENT MANAGEMENT
+
+Create a dedicated eye measurement module.
+
+## 9.1 Pupillary Distance (PD)
+
+Capture:
+
+- Binocular distance PD.
+- Monocular right PD.
+- Monocular left PD.
+- Near PD.
+- Measurement method.
+- Measurement date.
+- Measured by.
+
+## 9.2 Frame Measurements
+
+Capture:
+
+- A measurement.
+- B measurement.
+- DBL.
+- ED.
+- Frame PD.
+- Bridge width.
+- Temple length.
+- Frame width.
+- Lens width.
+- Lens height.
+
+## 9.3 Fitting Measurements
+
+For progressive and customized lenses:
+
+- Fitting height right.
+- Fitting height left.
+- Pantoscopic tilt.
+- Face-form angle.
+- Vertex distance.
+- Wrap angle.
+- Segment height.
+- Other manufacturer-specific fitting parameters.
+
+Use millimeters or other configurable units.
+
+## 9.4 Measurement History
+
+Maintain measurement history by customer and order.
+
+Record who entered and verified each measurement.
+
+## 9.5 Measurement Validation
+
+- Validate supported numeric ranges.
+- Display missing required measurements.
+- Identify incompatible lens/frame combinations.
+- Prevent order submission until mandatory measurements are complete.
+- Allow authorized exceptions with a reason.
+
+Do not use measurement validation as a substitute for professional optical judgment.
+
+# 10. FRAME MANAGEMENT
+
+Create a complete eyewear frame inventory module.
+
+## 10.1 Frame Registration
+
+Fields:
+
+- Frame ID.
+- Barcode.
+- SKU.
+- Brand.
+- Model.
+- Product name.
+- Frame category.
+- Frame type.
+- Material.
+- Color.
+- Shape.
+- Size.
+- Gender category where relevant.
+- Age group.
+- Manufacturer.
+- Supplier.
+- Purchase price.
+- Selling price.
+- MRP.
+- GST configuration.
+- Warranty period.
+- Product photographs.
+- Description.
+- Status.
+
+## 10.2 Frame Categories
+
+- Full Rim.
+- Half Rim.
+- Rimless.
+- Metal Frame.
+- Plastic Frame.
+- Titanium.
+- Acetate.
+- TR90.
+- Kids Frame.
+- Sports Frame.
+- Safety Frame.
+- Luxury Frame.
+- Fashion Frame.
+
+## 10.3 Frame Shapes
+
+- Round.
+- Rectangle.
+- Square.
+- Aviator.
+- Cat Eye.
+- Oval.
+- Wayfarer.
+- Geometric.
+- Other.
+
+## 10.4 Frame Inventory
+
+Track:
+
+- Opening stock.
+- Purchased stock.
+- Sold stock.
+- Reserved stock.
+- Damaged stock.
+- Returned stock.
+- Available stock.
+- Branch-wise stock.
+- Warehouse stock.
+
+## 10.5 Frame Variants
+
+Support multiple variants by:
+
+- Color.
+- Size.
+- Material.
+- Model.
+- SKU.
+
+Each sellable variant must have its own inventory identity and barcode.
+
+## 10.6 Frame Profile
+
+Display:
+
+- Product details.
+- Images.
+- Purchase history.
+- Sales history.
+- Current stock.
+- Branch availability.
+- Supplier.
+- Cost price.
+- Selling price.
+- Profit margin.
+- Warranty details.
+
+# 11. LENS MANAGEMENT
+
+Build a comprehensive lens product management module.
+
+## 11.1 Lens Categories
+
+- Single Vision.
+- Bifocal.
+- Progressive.
+- Office Lens.
+- Computer Lens.
+- Reading Lens.
+- Photochromic.
+- Blue Light Filtering.
+- Polarized.
+- High Index.
+- Aspheric.
+- Safety Lens.
+- Sunglass Lens.
+- Specialty Lens.
+
+## 11.2 Lens Registration
+
+Fields:
+
+- Lens ID.
+- SKU.
+- Brand.
+- Manufacturer.
+- Product name.
+- Lens category.
+- Lens design.
+- Material.
+- Refractive index.
+- Coating.
+- Tint.
+- Photochromic type.
+- Diameter.
+- Base curve.
+- Power range.
+- Stock type.
+- Supplier.
+- Purchase cost.
+- Selling price.
+- GST configuration.
+- Warranty.
+- Description.
+
+## 11.3 Lens Material
+
+Support:
+
+- CR-39.
+- Polycarbonate.
+- Trivex.
+- High Index 1.60.
+- High Index 1.67.
+- High Index 1.74.
+- Other configurable materials.
+
+## 11.4 Lens Coatings
+
+- Anti-Reflective.
+- Hard Coat.
+- Scratch Resistant.
+- Hydrophobic.
+- Oleophobic.
+- UV Protection.
+- Blue Light Filtering.
+- Mirror Coating.
+- Anti-Fog.
+
+## 11.5 Lens Pricing
+
+Configure:
+
+- Base price.
+- Power range price.
+- Material surcharge.
+- Coating surcharge.
+- Tint surcharge.
+- Progressive design surcharge.
+- Customization charge.
+- Laboratory processing charge.
+
+## 11.6 Lens Compatibility
+
+Create rules to identify whether a lens is compatible with:
+
+- Prescription values.
+- Frame type.
+- Frame size.
+- Lens diameter.
+- Lens material.
+- Fitting measurements.
+- Required manufacturing process.
+
+Compatibility rules must be configurable and must not replace manufacturer specifications or professional verification.
+
+# 12. CONTACT LENS MANAGEMENT
+
+Create a dedicated contact lens module.
+
+## 12.1 Contact Lens Registration
+
+Fields:
+
+- Product ID.
+- Brand.
+- Model.
+- Lens type.
+- Material.
+- Replacement schedule.
+- Water content.
+- Base curve.
+- Diameter.
+- Power range.
+- Manufacturer.
+- Supplier.
+- Purchase price.
+- Selling price.
+- Barcode.
+- Batch number.
+- Expiry date.
+
+## 12.2 Contact Lens Types
+
+- Daily Disposable.
+- Weekly.
+- Monthly.
+- Quarterly.
+- Yearly.
+- Toric.
+- Multifocal.
+- Colored.
+- Specialty.
+
+## 12.3 Contact Lens Prescription
+
+Capture right and left eye separately:
+
+- SPH.
+- CYL.
+- AXIS.
+- ADD.
+- BC.
+- DIA.
+- Brand.
+- Product type.
+
+## 12.4 Batch and Expiry Tracking
+
+Track:
+
+- Manufacturer batch number.
+- Manufacturing date.
+- Expiry date.
+- Available quantity.
+- Sold quantity.
+- Returned quantity.
+- Damaged quantity.
+
+Block expired products from sale.
+
+Generate near-expiry alerts.
+
+# 13. SUNGLASSES MANAGEMENT
+
+Manage prescription and non-prescription sunglasses.
+
+Fields:
+
+- Brand.
+- Model.
+- SKU.
+- Frame type.
+- Lens type.
+- Polarization.
+- UV protection claim.
+- Lens color.
+- Frame color.
+- Material.
+- Purchase cost.
+- Selling price.
+- MRP.
+- Warranty.
+- Barcode.
+- Stock.
+
+Support:
+
+- Men's sunglasses.
+- Women's sunglasses.
+- Kids sunglasses.
+- Sports sunglasses.
+- Luxury sunglasses.
+- Prescription sunglasses.
+
+# 14. OPTICAL ACCESSORIES MANAGEMENT
+
+Manage:
+
+- Lens cleaning solution.
+- Microfiber cloth.
+- Eyewear cases.
+- Nose pads.
+- Screws.
+- Temples.
+- Frame accessories.
+- Contact lens solution.
+- Contact lens cases.
+- Eyewear chains.
+- Repair kits.
+
+Each item should support SKU, barcode, purchase cost, selling price, GST, supplier, and inventory.
+
+# 15. POINT OF SALE (POS)
+
+Develop a fast and user-friendly optical retail POS.
+
+This must support walk-in customers and prescription-based orders.
+
+## 15.1 POS Interface
+
+Include:
+
+- Product search.
+- Barcode scanning.
+- Category filters.
+- Brand filters.
+- Product images.
+- Quick product selection.
+- Customer search.
+- New customer registration.
+- Prescription selection.
+- Frame selection.
+- Lens selection.
+- Accessories.
+- Discount.
+- Tax calculation.
+- Payment.
+- Invoice generation.
+
+## 15.2 POS Transaction Types
+
+- Frame only.
+- Lens only.
+- Complete spectacles.
+- Contact lenses.
+- Sunglasses.
+- Accessories.
+- Repair.
+- Service charges.
+- Mixed product sales.
+
+## 15.3 POS Features
+
+- Add multiple items.
+- Change quantity.
+- Apply discounts.
+- Apply coupons.
+- Hold sale.
+- Resume sale.
+- Cancel sale with permission.
+- Partial payment.
+- Split payment.
+- Customer credit.
+- Advance payment.
+- Print receipt.
+- WhatsApp receipt.
+- Email invoice.
+
+## 15.4 Payment Methods
+
+- Cash.
+- UPI.
+- Credit Card.
+- Debit Card.
+- Bank Transfer.
+- NEFT.
+- RTGS.
+- Cheque.
+- Payment Gateway.
+- Store Credit.
+
+## 15.5 POS Validation
+
+- Prevent negative stock where not permitted.
+- Validate product prices.
+- Validate discounts.
+- Check customer and prescription information when required.
+- Prevent duplicate payments.
+- Preserve transaction history.
+- Support authorized price overrides.
+
+# 16. QUOTATION MANAGEMENT
+
+Allow optical sales staff to prepare quotations.
+
+## 16.1 Quotation Creation
+
+Fields:
+
+- Quotation number.
+- Customer.
+- Prescription.
+- Frame.
+- Lens.
+- Lens coating.
+- Accessories.
+- Services.
+- Discount.
+- Tax.
+- Total amount.
+- Validity.
+- Sales executive.
+- Remarks.
+
+## 16.2 Quotation Features
+
+- Multiple product combinations.
+- Multiple lens options.
+- Good, better, best pricing.
+- Alternative frame selection.
+- Alternative lens selection.
+- PDF quotation.
+- WhatsApp sharing.
+- Email sharing.
+- Convert quotation into order.
+- Follow-up reminders.
+
+# 17. SALES ORDER AND PRESCRIPTION-TO-DELIVERY WORKFLOW
+
+This is the core optical order management module.
+
+## 17.1 Sales Order Creation
+
+Fields:
+
+- Order number.
+- Customer.
+- Prescription.
+- Frame.
+- Lens type.
+- Right lens specification.
+- Left lens specification.
+- Frame measurements.
+- Fitting measurements.
+- Coating.
+- Tint.
+- Lens manufacturer.
+- Laboratory.
+- Processing instructions.
+- Expected delivery date.
+- Assigned employee.
+- Order priority.
+- Order amount.
+- Advance payment.
+- Payment status.
+
+## 17.2 Order Types
+
+- Complete Spectacles.
+- Frame Only.
+- Lens Replacement.
+- Prescription Sunglasses.
+- Progressive Glasses.
+- Bifocal Glasses.
+- Contact Lens Order.
+- Custom Optical Order.
+
+## 17.3 Order Status
+
+- Draft.
+- Quotation.
+- Confirmed.
+- Advance Paid.
+- Awaiting Frame.
+- Awaiting Lens.
+- Sent to Laboratory.
+- Lens Processing.
+- Lens Received.
+- Fitting Pending.
+- Quality Check.
+- Ready for Delivery.
+- Delivered.
+- Cancelled.
+- On Hold.
+
+## 17.4 Order Workflow
+
+Customer → Prescription → Measurement → Frame Selection → Lens Selection → Quotation → Order Confirmation → Advance Payment → Stock Reservation → Lens Processing → Quality Control → Fitting → Final Billing → Delivery.
+
+## 17.5 Order Tracking
+
+Display a timeline with:
+
+- Order created.
+- Prescription verified.
+- Measurements verified.
+- Frame reserved.
+- Lens ordered.
+- Laboratory processing.
+- Lens received.
+- Fitting completed.
+- Quality checked.
+- Ready for delivery.
+- Delivered.
+
+Maintain status history and employee responsibility.
+
+# 18. LENS LABORATORY MANAGEMENT
+
+Create a dedicated lens processing and laboratory workflow.
+
+## 18.1 Laboratory Management
+
+Fields:
+
+- Laboratory name.
+- Contact person.
+- Phone.
+- Email.
+- Address.
+- Supplier.
+- Processing capabilities.
+- Service categories.
+- Price list.
+- Turnaround time.
+- Status.
+
+Support internal and external laboratories.
+
+## 18.2 Lab Job Creation
+
+Generate a unique lab job number.
+
+Fields:
+
+- Sales order.
+- Customer.
+- Frame.
+- Lens type.
+- Right lens prescription.
+- Left lens prescription.
+- PD.
+- Fitting height.
+- Frame measurements.
+- Lens material.
+- Lens coating.
+- Diameter.
+- Special instructions.
+- Expected completion.
+- Laboratory.
+- Assigned technician.
+
+## 18.3 Laboratory Job Status
+
+- Created.
+- Sent to Lab.
+- Received by Lab.
+- In Process.
+- Awaiting Clarification.
+- Processing Complete.
+- Dispatched.
+- Received at Store.
+- Rejected.
+- Rework Required.
+
+## 18.4 Laboratory Cost Management
+
+Track:
+
+- Lens purchase cost.
+- Processing cost.
+- Coating cost.
+- Freight.
+- Additional charges.
+- Total laboratory cost.
+
+## 18.5 Lab Job Documents
+
+Attach:
+
+- Prescription.
+- Job card.
+- Measurements.
+- Lab instructions.
+- Reference photographs.
+- Delivery documents.
+
+## 18.6 Internal Lens Processing
+
+If the business operates its own lab, support:
+
+- Lens blank inventory.
+- Cutting.
+- Edging.
+- Drilling.
+- Grooving.
+- Mounting.
+- Polishing.
+- Tinting.
+- Quality inspection.
+
+Track operator, machine, start time, completion time, and wastage.
+
+The system must not pretend to control optical equipment unless an actual device integration has been implemented.
+
+# 19. QUALITY CONTROL AND FITTING MANAGEMENT
+
+## 19.1 Quality Check
+
+Before customer delivery, verify:
+
+- Correct customer.
+- Correct frame.
+- Correct lens.
+- Right eye prescription.
+- Left eye prescription.
+- PD.
+- Axis.
+- ADD.
+- Lens coating.
+- Lens orientation.
+- Lens condition.
+- Frame alignment.
+- Screw tightness.
+- Nose pad condition.
+- Temple alignment.
+- Overall appearance.
+
+## 19.2 Quality Check Status
+
+- Pending.
+- Passed.
+- Failed.
+- Rework Required.
+- Approved for Delivery.
+
+## 19.3 Fitting Management
+
+Record:
+
+- Fitting date.
+- Fitting technician.
+- Frame adjustment.
+- Nose pad adjustment.
+- Temple adjustment.
+- Customer feedback.
+- Follow-up required.
+
+Maintain fitting history.
+
+# 20. ORDER DELIVERY MANAGEMENT
+
+## 20.1 Delivery Registration
+
+Capture:
+
+- Order.
+- Customer.
+- Delivery date.
+- Delivery employee.
+- Final payment.
+- Balance amount.
+- Customer acknowledgment.
+- Product photographs.
+- Delivery notes.
+
+## 20.2 Delivery Checklist
+
+- Frame verified.
+- Lens verified.
+- Prescription verified.
+- Quality check completed.
+- Accessories included.
+- Case included.
+- Cleaning cloth included.
+- Customer informed about usage and care.
+- Invoice generated.
+- Warranty information shared.
+
+## 20.3 Delivery Notifications
+
+Send:
+
+- Order confirmation.
+- Processing update.
+- Expected delivery update.
+- Ready for collection.
+- Delivered confirmation.
+
+# 21. REPAIRS AND ADJUSTMENTS
+
+Create a repair service module.
+
+## 21.1 Repair Registration
+
+Fields:
+
+- Repair ID.
+- Customer.
+- Product.
+- Frame.
+- Brand.
+- Complaint.
+- Repair type.
+- Photographs.
+- Received date.
+- Expected delivery.
+- Assigned technician.
+- Estimated cost.
+- Final cost.
+- Warranty status.
+
+## 21.2 Repair Types
+
+- Frame Adjustment.
+- Screw Replacement.
+- Nose Pad Replacement.
+- Temple Repair.
+- Hinge Repair.
+- Frame Welding.
+- Lens Replacement.
+- Lens Cleaning.
+- Frame Polishing.
+- Other.
+
+## 21.3 Repair Workflow
+
+Received → Inspection → Estimate → Customer Approval → Repair → Quality Check → Payment → Delivery.
+
+# 22. WARRANTY MANAGEMENT
+
+Support warranty tracking for:
+
+- Frames.
+- Lenses.
+- Coatings.
+- Contact lenses where applicable.
+- Sunglasses.
+- Accessories.
+
+Fields:
+
+- Warranty ID.
+- Customer.
+- Product.
+- Invoice.
+- Purchase date.
+- Warranty duration.
+- Expiry date.
+- Warranty terms.
+- Claim reason.
+- Supporting photographs.
+- Supplier.
+- Claim status.
+- Resolution.
+
+Support:
+
+- Warranty claim.
+- Replacement.
+- Repair.
+- Credit note.
+- Supplier claim.
+
+Clearly distinguish manufacturer warranty from store service guarantees.
+
+# 23. RETURNS, EXCHANGES AND REFUNDS
+
+Support:
+
+- Frame return.
+- Lens return.
+- Contact lens return where permitted.
+- Sunglasses return.
+- Defective product return.
+- Wrong product return.
+- Exchange.
+- Refund.
+- Store credit.
+
+## 23.1 Return Processing
+
+Capture:
+
+- Original invoice.
+- Product.
+- Quantity.
+- Return reason.
+- Product condition.
+- Return date.
+- Approval.
+- Refund amount.
+- Restocking decision.
+
+## 23.2 Exchange Management
+
+Allow:
+
+- Same-value exchange.
+- Higher-value exchange.
+- Lower-value exchange.
+- Additional payment.
+- Store credit.
+
+For prescription lenses and opened contact lenses, enforce configurable return policies and applicable hygiene and consumer requirements.
+
+# 24. INVENTORY MANAGEMENT
+
+Build a complete inventory system.
+
+## 24.1 Inventory Operations
+
+- Stock In.
+- Stock Out.
+- Stock Transfer.
+- Stock Adjustment.
+- Stock Reservation.
+- Stock Return.
+- Stock Damage.
+- Stock Write-off.
+- Physical Stock Count.
+
+## 24.2 Stock Tracking
+
+Track:
+
+- SKU.
+- Barcode.
+- Product.
+- Variant.
+- Branch.
+- Warehouse.
+- Opening stock.
+- Purchased quantity.
+- Sold quantity.
+- Reserved quantity.
+- Damaged quantity.
+- Returned quantity.
+- Available quantity.
+
+## 24.3 Batch Tracking
+
+For applicable products, particularly contact lenses and solutions, track:
+
+- Batch number.
+- Expiry date.
+- Manufacturing date.
+- Supplier.
+- Purchase invoice.
+
+## 24.4 Reorder Management
+
+Configure:
+
+- Minimum stock.
+- Maximum stock.
+- Reorder level.
+- Reorder quantity.
+- Preferred supplier.
+
+Generate low-stock notifications.
+
+## 24.5 Stock Valuation
+
+Support:
+
+- Weighted Average Cost.
+- FIFO.
+
+Choose a consistent inventory costing policy and document it.
+
+## 24.6 Inventory Reports
+
+- Current stock.
+- Branch-wise stock.
+- Warehouse stock.
+- Low stock.
+- Expired stock.
+- Near-expiry stock.
+- Dead stock.
+- Fast-moving items.
+- Slow-moving items.
+- Stock valuation.
+- Stock adjustment history.
+
+# 25. PURCHASE AND SUPPLIER MANAGEMENT
+
+## 25.1 Supplier Registration
+
+Fields:
+
+- Supplier ID.
+- Supplier name.
+- Contact person.
+- Mobile.
+- Email.
+- Address.
+- GSTIN.
+- PAN.
+- Bank details.
+- Payment terms.
+- Supplier category.
+- Status.
+
+## 25.2 Purchase Order
+
+Fields:
+
+- Purchase order number.
+- Supplier.
+- Branch.
+- Warehouse.
+- Product.
+- SKU.
+- Quantity.
+- Unit cost.
+- Discount.
+- Tax.
+- Total amount.
+- Expected delivery.
+- Payment terms.
+
+## 25.3 Goods Received Note (GRN)
+
+Capture:
+
+- Purchase order.
+- Supplier invoice.
+- Received quantity.
+- Accepted quantity.
+- Rejected quantity.
+- Damaged quantity.
+- Batch number.
+- Expiry date.
+- Barcode.
+- Storage location.
+
+Update stock only after the appropriate receipt workflow.
+
+## 25.4 Supplier Returns
+
+Support:
+
+- Defective product.
+- Wrong product.
+- Excess stock.
+- Expired product.
+- Warranty replacement.
+
+Maintain supplier balances and transaction history.
+
+# 26. BARCODE AND QR CODE MANAGEMENT
+
+Generate barcode labels for:
+
+- Frames.
+- Lenses.
+- Contact lenses.
+- Sunglasses.
+- Accessories.
+- Inventory packages.
+
+Support:
+
+- Barcode scanning.
+- SKU search.
+- Barcode printing.
+- QR product lookup.
+- Stock counting using barcode.
+- POS product lookup.
+
+Generate QR codes for:
+
+- Customer profiles.
+- Sales orders.
+- Prescriptions.
+- Warranty records.
+
+Protect prescription information behind authentication; do not expose sensitive data in publicly readable QR codes.
+
+# 27. CUSTOMER LOYALTY AND CRM
+
+Features:
+
+- Loyalty points.
+- Membership tiers.
+- Referral rewards.
+- Repeat purchase discounts.
+- Birthday offers.
+- Annual eye checkup reminders.
+- Customer feedback.
+- Complaint management.
+- Promotional campaigns.
+
+Track:
+
+- Customer lifetime value.
+- Average purchase amount.
+- Repeat purchase rate.
+- Last purchase.
+- Preferred brands.
+- Preferred frame types.
+- Preferred lens categories.
+
+# 28. ONLINE OPTICAL STORE
+
+Create an integrated customer-facing website.
+
+## 28.1 Public Website Pages
+
+- Home.
+- Eyeglasses.
+- Sunglasses.
+- Contact Lenses.
+- Frames.
+- Lens Types.
+- Brands.
+- Offers.
+- About Us.
+- Store Locations.
+- Contact.
+- Customer Login.
+- Order Tracking.
+
+## 28.2 Product Catalog
+
+Allow filtering by:
+
+- Brand.
+- Frame type.
+- Frame shape.
+- Material.
+- Color.
+- Gender category.
+- Price range.
+- Size.
+- Lens type.
+
+## 28.3 Online Ordering
+
+Customers can:
+
+1. Browse products.
+2. Select frames.
+3. Select lenses.
+4. Upload prescription.
+5. Enter eye measurements where supported.
+6. Select lens coatings.
+7. View pricing.
+8. Add to cart.
+9. Pay online.
+10. Track order.
+
+Require authorized review of prescription and measurements before manufacturing or dispatch where needed.
+
+## 28.4 Store Pickup
+
+Support:
+
+- Home delivery.
+- Store pickup.
+- Branch selection.
+- Order status.
+- Delivery charges.
+
+# 29. CUSTOMER PORTAL
+
+Customers can:
+
+- Login.
+- Manage profile.
+- View prescription history.
+- View measurements.
+- Upload prescriptions.
+- View orders.
+- Track processing.
+- View invoices.
+- Pay outstanding balance.
+- Download warranty certificates.
+- Request repairs.
+- Submit complaints.
+- Request appointments.
+- View purchase history.
+
+Customers must only access their own records.
+
+# 30. APPOINTMENT AND OPTOMETRY MANAGEMENT
+
+Make this module configurable for stores that provide eye examinations.
+
+## 30.1 Appointment Booking
+
+Fields:
+
+- Customer.
+- Appointment date.
+- Time.
+- Branch.
+- Optometrist.
+- Appointment type.
+- Notes.
+- Status.
+
+## 30.2 Appointment Types
+
+- Eye Examination.
+- Prescription Review.
+- Frame Selection.
+- Contact Lens Consultation.
+- Follow-up.
+- Fitting Adjustment.
+- General Consultation.
+
+## 30.3 Examination Record
+
+Where an appropriately qualified professional provides the service, record:
+
+- Examination date.
+- Optometrist.
+- Visual acuity.
+- Refraction details.
+- Prescription.
+- Remarks.
+- Referral recommendation.
+- Next follow-up.
+
+This module is for professional recordkeeping. Do not build automated diagnosis or treatment recommendations.
+
+# 31. BILLING AND GST MANAGEMENT
+
+Create a complete billing system.
+
+## 31.1 Invoice Types
+
+- Retail Invoice.
+- Tax Invoice.
+- Proforma Invoice.
+- Quotation.
+- Credit Note.
+- Debit Note.
+- Advance Receipt.
+- Payment Receipt.
+- Repair Invoice.
+
+## 31.2 Invoice Components
+
+- Frame price.
+- Lens price.
+- Coating.
+- Contact lens.
+- Sunglasses.
+- Accessories.
+- Processing charges.
+- Repair charges.
+- Discounts.
+- Tax.
+- Delivery charges.
+
+## 31.3 GST Configuration
+
+Support:
+
+- GSTIN.
+- HSN/SAC.
+- CGST.
+- SGST.
+- IGST.
+- Place of supply.
+- Taxable value.
+- Tax exemption where applicable.
+
+Tax rates and product classifications must be configurable and validated against applicable Indian tax rules.
+
+## 31.4 Invoice Features
+
+- Unique invoice numbers.
+- Branch-wise invoice series.
+- PDF invoice.
+- Print invoice.
+- Email invoice.
+- WhatsApp invoice.
+- Customer ledger.
+- Payment history.
+
+# 32. PAYMENT AND CASH MANAGEMENT
+
+Payment methods:
+
+- Cash.
+- UPI.
+- Credit Card.
+- Debit Card.
+- Bank Transfer.
+- NEFT.
+- RTGS.
+- Cheque.
+- Payment Gateway.
+- Store Credit.
+
+Features:
+
+- Full payment.
+- Partial payment.
+- Advance payment.
+- Split payment.
+- Outstanding payment.
+- Refund.
+- Payment reconciliation.
+- Cash register.
+- Daily closing.
+
+## 32.1 Cash Register
+
+Track:
+
+- Opening cash.
+- Cash sales.
+- Cash expenses.
+- Cash refunds.
+- Cash deposits.
+- Closing cash.
+- Difference.
+- Employee.
+- Branch.
+- Shift.
+
+# 33. EXPENSE MANAGEMENT
+
+Expense categories:
+
+- Rent.
+- Employee Salary.
+- Electricity.
+- Internet.
+- Marketing.
+- Store Maintenance.
+- Equipment.
+- Transport.
+- Packaging.
+- Laboratory Processing.
+- Repair.
+- Office Expenses.
+- Other.
+
+Each expense should include:
+
+- Expense date.
+- Category.
+- Branch.
+- Supplier.
+- Amount.
+- Tax.
+- Payment method.
+- Attachment.
+- Approval status.
+- Created by.
+
+# 34. ACCOUNTING AND FINANCIAL MANAGEMENT
+
+Implement double-entry accounting.
+
+## 34.1 Chart of Accounts
+
+Assets:
+
+- Cash.
+- Bank.
+- Accounts Receivable.
+- Inventory.
+- Supplier Advances.
+- Equipment.
+
+Liabilities:
+
+- Accounts Payable.
+- GST Payable.
+- Customer Advances.
+- Other Liabilities.
+
+Revenue:
+
+- Frame Sales.
+- Lens Sales.
+- Contact Lens Sales.
+- Sunglasses Sales.
+- Accessories Sales.
+- Repair Revenue.
+- Processing Revenue.
+- Other Income.
+
+Expenses:
+
+- Cost of Goods Sold.
+- Rent.
+- Salaries.
+- Electricity.
+- Marketing.
+- Repairs.
+- Laboratory Costs.
+- Transport.
+- Administrative Expenses.
+
+## 34.2 Accounting Modules
+
+- Chart of Accounts.
+- Journal Entries.
+- General Ledger.
+- Customer Ledger.
+- Supplier Ledger.
+- Cash Book.
+- Bank Book.
+- Accounts Receivable.
+- Accounts Payable.
+- Trial Balance.
+- Profit and Loss.
+- Balance Sheet.
+- Cash Flow.
+- Bank Reconciliation.
+
+Ensure journal entries balance.
+
+Posted entries must not be silently edited. Corrections must use auditable reversals.
+
+# 35. DASHBOARD AND BUSINESS ANALYTICS
+
+Create role-specific dashboards.
+
+## 35.1 Owner Dashboard
+
+Display:
+
+- Total sales today.
+- Total sales this month.
+- Total orders.
+- Pending orders.
+- Orders in laboratory.
+- Ready for delivery.
+- Delivered orders.
+- Total customers.
+- New customers.
+- Total frames.
+- Total lens inventory.
+- Low-stock items.
+- Expiring contact lenses.
+- Monthly revenue.
+- Monthly expenses.
+- Gross profit.
+- Net profit.
+- Outstanding payments.
+- Branch performance.
+
+## 35.2 Sales Dashboard
+
+- Today's sales.
+- Monthly sales.
+- Average order value.
+- Frame sales.
+- Lens sales.
+- Contact lens sales.
+- Sunglasses sales.
+- Pending payments.
+- Salesperson performance.
+- Product category performance.
+
+## 35.3 Laboratory Dashboard
+
+- New lab jobs.
+- Jobs in process.
+- Jobs delayed.
+- Completed jobs.
+- Rejected jobs.
+- Rework required.
+- Average processing time.
+- Laboratory costs.
+
+## 35.4 Inventory Dashboard
+
+- Total stock.
+- Low stock.
+- Expired stock.
+- Near-expiry stock.
+- Fast-moving products.
+- Slow-moving products.
+- Stock valuation.
+- Branch-wise inventory.
+
+## 35.5 Financial Dashboard
+
+- Revenue.
+- Expenses.
+- Gross profit.
+- Net profit.
+- Cash balance.
+- Bank balance.
+- Receivables.
+- Payables.
+- Refunds.
+- Tax summary.
+
+All dashboard metrics must use actual database records.
+
+# 36. REPORTS AND ANALYTICS
+
+Create a comprehensive reporting system.
+
+## 36.1 Sales Reports
+
+1. Daily Sales.
+2. Monthly Sales.
+3. Sales Register.
+4. Customer-wise Sales.
+5. Product-wise Sales.
+6. Frame Sales.
+7. Lens Sales.
+8. Contact Lens Sales.
+9. Sunglasses Sales.
+10. Salesperson Performance.
+11. Branch-wise Sales.
+12. Discount Report.
+13. Refund Report.
+
+## 36.2 Prescription Reports
+
+1. Prescription Register.
+2. Customer Prescription History.
+3. Prescription-wise Orders.
+4. Optometrist-wise Prescriptions.
+5. Prescription Review Due.
+6. Missing Measurement Report.
+
+## 36.3 Order Reports
+
+1. Sales Order Register.
+2. Pending Orders.
+3. Laboratory Pending.
+4. Delayed Orders.
+5. Ready for Delivery.
+6. Delivered Orders.
+7. Cancelled Orders.
+8. Rework Orders.
+
+## 36.4 Inventory Reports
+
+1. Current Stock.
+2. Branch-wise Stock.
+3. Low Stock.
+4. Expired Stock.
+5. Near-expiry Stock.
+6. Stock Valuation.
+7. Stock Movement.
+8. Dead Stock.
+9. Fast-moving Products.
+10. Slow-moving Products.
+
+## 36.5 Purchase Reports
+
+1. Purchase Register.
+2. Supplier-wise Purchases.
+3. Pending Purchase Orders.
+4. Goods Received.
+5. Supplier Returns.
+6. Purchase Cost Analysis.
+
+## 36.6 Financial Reports
+
+1. Income.
+2. Expenses.
+3. Gross Profit.
+4. Net Profit.
+5. Profit and Loss.
+6. Balance Sheet.
+7. Cash Flow.
+8. Customer Outstanding.
+9. Supplier Outstanding.
+10. GST Summary.
+11. Cash Register.
+12. Bank Reconciliation.
+
+## 36.7 Customer Reports
+
+1. Customer Register.
+2. New Customers.
+3. Repeat Customers.
+4. Customer Lifetime Value.
+5. Warranty Claims.
+6. Repair History.
+7. Customer Feedback.
+
+Support filters and PDF, Excel, and CSV exports.
+
+# 37. AUTOMATION AND NOTIFICATIONS
+
+Use Laravel queues and scheduled tasks.
+
+Automate:
+
+- New order notification.
+- Advance payment confirmation.
+- Laboratory job status.
+- Delayed order alert.
+- Ready-for-delivery notification.
+- Customer pickup reminder.
+- Warranty expiry reminder.
+- Contact lens expiry alert.
+- Low-stock notification.
+- Supplier payment reminder.
+- Customer follow-up.
+- Annual checkup reminder.
+- Birthday offers.
+
+Channels:
+
+- In-app.
+- Email.
+- SMS.
+- WhatsApp Business API.
+
+Maintain notification logs and delivery status.
+
+# 38. OPTIONAL AI FEATURES
+
+Build an integration-ready AI layer.
+
+Potential features:
+
+1. Prescription OCR.
+2. Prescription document data extraction.
+3. Product search assistant.
+4. Frame recommendation based on customer preferences.
+5. Inventory demand forecasting.
+6. Sales forecasting.
+7. Customer follow-up suggestions.
+8. Automated customer support.
+9. Lens order data entry assistance.
+10. Optical product catalog assistant.
+
+Important safeguards:
+
+- OCR output must be reviewed by an authorized person.
+- Never silently change prescription values.
+- Never use AI to diagnose eye conditions.
+- Never generate a prescription automatically.
+- Do not claim a frame is medically suitable based only on facial photographs.
+- Customer health-related data must be protected.
+
+# 39. DATABASE ARCHITECTURE
+
+Design a normalized MySQL database.
+
+Use:
+
+- Foreign keys.
+- Indexes.
+- Unique constraints.
+- Decimal precision.
+- Timestamps.
+- Soft deletes where appropriate.
+- Audit logs.
+- Company and branch ownership.
+
+## 39.1 Core Tables
+
+- companies
+- branches
+- warehouses
+- users
+- roles
+- permissions
+- employees
+- departments
+- activity_logs
+- audit_logs
+- system_settings
+
+## 39.2 Customer Tables
+
+- customers
+- customer_addresses
+- customer_contacts
+- customer_notes
+- customer_communications
+- customer_feedback
+- customer_documents
+
+## 39.3 Prescription Tables
+
+- prescriptions
+- prescription_eye_values
+- prescription_documents
+- prescription_history
+- eye_measurements
+- fitting_measurements
+- prescription_verifications
+- optometry_appointments
+- eye_examinations
+
+## 39.4 Product Tables
+
+- product_categories
+- brands
+- manufacturers
+- products
+- product_variants
+- product_images
+- product_barcodes
+- frame_attributes
+- lens_attributes
+- contact_lens_attributes
+- sunglasses_attributes
+- accessory_attributes
+- product_price_lists
+- product_warranties
+
+## 39.5 Inventory Tables
+
+- inventory_locations
+- inventory_stocks
+- inventory_movements
+- stock_reservations
+- stock_adjustments
+- stock_transfers
+- stock_transfer_items
+- stock_counts
+- product_batches
+- stock_expiry_records
+
+## 39.6 Supplier and Purchase Tables
+
+- suppliers
+- supplier_contacts
+- purchase_orders
+- purchase_order_items
+- goods_received_notes
+- goods_received_items
+- supplier_invoices
+- supplier_payments
+- supplier_returns
+
+## 39.7 Sales Tables
+
+- quotations
+- quotation_items
+- sales_orders
+- sales_order_items
+- sales_order_prescriptions
+- sales_order_measurements
+- sales_order_status_history
+- sales_invoices
+- sales_invoice_items
+- sales_returns
+- sales_return_items
+- sales_refunds
+- sales_payments
+- payment_allocations
+
+## 39.8 Laboratory Tables
+
+- laboratories
+- laboratory_services
+- lab_jobs
+- lab_job_items
+- lab_job_status_history
+- lab_job_measurements
+- lab_job_documents
+- lab_job_costs
+- lab_processing_tasks
+- lab_quality_checks
+
+## 39.9 Quality and Delivery Tables
+
+- quality_inspections
+- quality_inspection_items
+- fitting_records
+- order_deliveries
+- delivery_checklists
+- delivery_acknowledgements
+
+## 39.10 Repair and Warranty Tables
+
+- repair_jobs
+- repair_job_items
+- repair_job_status_history
+- warranty_records
+- warranty_claims
+- warranty_claim_items
+
+## 39.11 POS and Cash Tables
+
+- pos_sessions
+- pos_transactions
+- pos_transaction_items
+- cash_registers
+- cash_register_entries
+- cash_closings
+
+## 39.12 Finance Tables
+
+- expense_categories
+- expenses
+- expense_attachments
+- chart_of_accounts
+- journal_entries
+- journal_entry_lines
+- accounting_periods
+- bank_accounts
+- bank_transactions
+- bank_reconciliations
+
+## 39.13 CRM and Notification Tables
+
+- customer_followups
+- loyalty_programs
+- loyalty_transactions
+- coupons
+- customer_complaints
+- notification_templates
+- notifications
+- communication_logs
+
+## 39.14 Website and Integration Tables
+
+- website_pages
+- website_banners
+- online_carts
+- online_cart_items
+- online_orders
+- payment_gateway_transactions
+- api_tokens
+- webhook_logs
+- integration_settings
+
+Create additional junction tables as required.
+
+Document all relationships in DATABASE_SCHEMA.md and ER_DIAGRAM.md.
+
+# 40. IMPORTANT BUSINESS RULES
+
+## 40.1 Prescription Integrity
+
+- Store right-eye and left-eye values independently.
+- Preserve prescription history.
+- Maintain original values.
+- Record who created and verified prescriptions.
+- Do not silently overwrite prescription records.
+- Validate units and supported formats.
+- Require review of OCR-extracted data.
+
+## 40.2 Sales Order Integrity
+
+- Every prescription-based order must link to an appropriate prescription.
+- Required measurements must be validated.
+- Frame and lens specifications must be stored against the order.
+- Confirmed order specifications must be versioned.
+- Changes after laboratory submission must require authorization and a documented revision.
+- Orders must have a traceable status history.
+
+## 40.3 Inventory Integrity
+
+- Prevent negative stock unless specifically authorized.
+- Reserve stock for confirmed orders.
+- Release reservations when orders are cancelled.
+- Prevent expired contact lens products from being sold.
+- Track batch and expiry data where applicable.
+- Maintain stock movement history.
+- Use database transactions for stock updates.
+
+## 40.4 Laboratory Integrity
+
+- Every lab job must link to a sales order.
+- Store exact prescription and measurement snapshots.
+- Track processing status.
+- Record rejected and rework jobs.
+- Do not mark a job complete before required checks.
+- Record laboratory costs.
+
+## 40.5 Financial Integrity
+
+- Every payment must be traceable.
+- Every refund must reference an original transaction.
+- Discounts must follow permissions.
+- Invoice totals must be calculated from line items.
+- Tax must follow configured rules.
+- Posted journal entries must balance.
+- Financial records must not be silently deleted.
+
+## 40.6 Data Integrity
+
+- Use transactions for critical workflows.
+- Prevent duplicate payment processing.
+- Maintain unique document numbers.
+- Keep audit history.
+- Apply strict branch and company access restrictions.
+
+# 41. UI/UX DESIGN REQUIREMENTS
+
+Create a modern premium optical retail ERP interface.
+
+Design inspiration:
+
+- Zoho.
+- Odoo.
+- Modern retail POS.
+- Premium eyewear e-commerce platforms.
+
+Use:
+
+- Clean white background.
+- Light gray surfaces.
+- Professional typography.
+- Modern tables.
+- Searchable dropdowns.
+- Product image galleries.
+- Barcode search.
+- Interactive prescription forms.
+- Order tracking timelines.
+- Clear status badges.
+- Responsive dashboards.
+- Professional icons.
+
+Avoid cluttered forms and outdated admin templates.
+
+## Required Screens
+
+1. Login.
+2. Owner Dashboard.
+3. POS.
+4. Customer List.
+5. Customer Profile.
+6. Customer Registration.
+7. Prescription List.
+8. Prescription Entry.
+9. Prescription Details.
+10. Eye Measurement Form.
+11. Frame List.
+12. Frame Registration.
+13. Frame Details.
+14. Lens Catalog.
+15. Lens Registration.
+16. Contact Lens Catalog.
+17. Sunglasses Catalog.
+18. Accessories.
+19. Inventory Dashboard.
+20. Stock Register.
+21. Barcode Printing.
+22. Purchase Order.
+23. Goods Received.
+24. Supplier Management.
+25. Quotation.
+26. Sales Order.
+27. Sales Order Details.
+28. Lens Processing.
+29. Laboratory Job Card.
+30. Laboratory Dashboard.
+31. Quality Inspection.
+32. Fitting Management.
+33. Delivery Management.
+34. Repair Management.
+35. Warranty Management.
+36. Returns and Refunds.
+37. Appointment Calendar.
+38. Optometrist Management.
+39. Invoice Management.
+40. Payment Collection.
+41. Cash Register.
+42. Expenses.
+43. Accounting.
+44. Reports.
+45. Branch Management.
+46. User Management.
+47. Customer Portal.
+48. Online Store.
+49. Settings.
+
+Every screen must have functional database integration.
+
+# 42. SECURITY REQUIREMENTS
+
+Implement:
+
+- Secure authentication.
+- Password hashing.
+- CSRF protection.
+- SQL injection prevention.
+- XSS protection.
+- Server-side validation.
+- Role-based access.
+- Branch-level restrictions.
+- Tenant-level isolation.
+- Secure file uploads.
+- Prescription document protection.
+- Customer data access controls.
+- API authentication.
+- Rate limiting.
+- Session security.
+- Audit logging.
+
+Do not expose prescriptions, customer contact information, or eye measurements publicly.
+
+# 43. PERFORMANCE AND SCALABILITY
+
+Implement:
+
+- Database indexing.
+- Pagination.
+- Eloquent eager loading.
+- Query optimization.
+- Queued PDF generation.
+- Background Excel exports.
+- Redis caching where available.
+- Scheduled alerts.
+- Efficient inventory queries.
+- Optimized POS operations.
+- Database backups.
+- Error monitoring.
+
+# 44. DEMO DATA
+
+Create a demo company.
+
+Company Name: ABC Optical & Eyewear.
+
+Generate:
+
+- 1 company.
+- 3 branches.
+- 2 warehouses.
+- 10 employees.
+- 5 optometrists or opticians.
+- 100 customers.
+- 50 frames.
+- 30 lens products.
+- 20 contact lens products.
+- 20 sunglasses.
+- 30 accessories.
+- 10 suppliers.
+- 30 prescriptions.
+- 20 eye measurement records.
+- 30 quotations.
+- 25 sales orders.
+- 10 laboratory jobs.
+- 15 invoices.
+- 20 payments.
+- 10 repair jobs.
+- 10 warranty records.
+- 10 expenses.
+
+Include:
+
+- Single vision orders.
+- Progressive orders.
+- Bifocal orders.
+- Contact lens sales.
+- Frame-only sales.
+- Sunglasses sales.
+- Lens replacement.
+- Repair orders.
+- Partial payments.
+- Pending laboratory orders.
+- Delivered orders.
+
+Ensure all sample records have consistent relationships.
+
+# 44. TESTING REQUIREMENTS
+
+Use PHPUnit or Pest.
+
+## Unit Tests
+
+Test:
+
+- Prescription field validation.
+- Eye measurement validation.
+- Frame price calculation.
+- Lens price calculation.
+- Lens surcharge calculation.
+- GST calculation.
+- Discount calculation.
+- Order total.
+- Payment allocation.
+- Refund calculation.
+- Stock availability.
+- Stock valuation.
+- Contact lens expiry validation.
+- Warranty expiry.
+- Laboratory job cost.
+- Gross profit.
+
+## Feature Tests
+
+Test:
+
+- Customer registration.
+- Prescription entry.
+- Prescription history.
+- Measurement entry.
+- Frame registration.
+- Lens registration.
+- Contact lens registration.
+- POS sale.
+- Barcode scanning workflow.
+- Quotation creation.
+- Sales order creation.
+- Stock reservation.
+- Purchase order.
+- GRN.
+- Stock transfer.
+- Lab job creation.
+- Lab job completion.
+- Quality check.
+- Order delivery.
+- Payment collection.
+- Refund.
+- Repair job.
+- Warranty claim.
+- Accounting entries.
+- Branch permissions.
+
+## End-to-End Test
+
+Simulate a complete optical sales lifecycle:
+
+1. Register customer.
+2. Enter prescription.
+3. Capture right-eye values.
+4. Capture left-eye values.
+5. Record PD.
+6. Record frame measurements.
+7. Select frame.
+8. Select lens.
+9. Select coating.
+10. Generate quotation.
+11. Confirm sales order.
+12. Collect advance payment.
+13. Reserve frame stock.
+14. Create laboratory job.
+15. Send job to laboratory.
+16. Record laboratory processing.
+17. Receive completed lenses.
+18. Perform quality inspection.
+19. Complete fitting.
+20. Generate final invoice.
+21. Collect balance payment.
+22. Deliver eyewear.
+23. Generate warranty record.
+24. Update inventory.
+25. Generate customer purchase history.
+26. Calculate product profitability.
+
+Verify every prescription, inventory, operational, and financial transaction.
+
+# 45. DOCUMENTATION REQUIREMENTS
+
+Create:
+
+1. PROJECT_PLAN.md
+2. DATABASE_SCHEMA.md
+3. ER_DIAGRAM.md
+4. MODULE_STATUS.md
+5. DEVELOPMENT_LOG.md
+6. BUSINESS_RULES.md
+7. PRESCRIPTION_WORKFLOW.md
+8. LENS_LAB_WORKFLOW.md
+9. API_DOCUMENTATION.md
+10. TESTING_CHECKLIST.md
+11. INSTALLATION_GUIDE.md
+12. DEPLOYMENT_GUIDE.md
+13. USER_MANUAL.md
+
+Keep documentation updated throughout development.
+
+# 46. DEVELOPMENT PHASES
+
+## Phase 1: Foundation
+
+- Laravel setup.
+- MySQL setup.
+- Authentication.
+- Company management.
+- Branch management.
+- Warehouse management.
+- User management.
+- Roles and permissions.
+- Dashboard layout.
+
+## Phase 2: Master Data
+
+- Customer management.
+- Brand management.
+- Manufacturer management.
+- Product categories.
+- Frame catalog.
+- Lens catalog.
+- Contact lens catalog.
+- Sunglasses.
+- Accessories.
+- Supplier management.
+
+## Phase 3: Prescription and Measurements
+
+- Prescription entry.
+- Right-eye and left-eye data.
+- Prescription history.
+- PD.
+- Frame measurements.
+- Fitting measurements.
+- Prescription validation.
+- Document uploads.
+
+## Phase 4: Inventory and Purchase
+
+- Inventory management.
+- Barcode.
+- Stock movements.
+- Purchase orders.
+- Goods received.
+- Supplier returns.
+- Stock transfers.
+- Expiry tracking.
+
+## Phase 5: POS and Sales
+
+- POS.
+- Customer selection.
+- Product search.
+- Barcode scanning.
+- Quotations.
+- Sales orders.
+- Discounts.
+- Billing.
+- Payments.
+
+## Phase 6: Lens Processing
+
+- Laboratory management.
+- Lab job cards.
+- Processing stages.
+- Cost tracking.
+- Quality checks.
+- Fitting.
+- Order delivery.
+
+## Phase 7: After-Sales
+
+- Repairs.
+- Adjustments.
+- Warranty.
+- Returns.
+- Exchanges.
+- Refunds.
+- Customer complaints.
+
+## Phase 8: Finance
+
+- Expenses.
+- Cash management.
+- Accounting.
+- Customer ledger.
+- Supplier ledger.
+- Profitability.
+- Financial reports.
+
+## Phase 9: Customer Experience
+
+- Customer portal.
+- Online store.
+- Online ordering.
+- Appointment management.
+- Notifications.
+- Loyalty program.
+
+## Phase 10: Analytics and Integrations
+
+- Sales dashboards.
+- Inventory dashboards.
+- Laboratory dashboards.
+- AI OCR integration.
+- WhatsApp integration.
+- Payment gateway.
+- APIs.
+
+## Phase 11: Testing and Deployment
+
+- Unit testing.
+- Feature testing.
+- End-to-end testing.
+- Security testing.
+- Performance optimization.
+- Production deployment.
+- Database backup.
+- Documentation.
+
+# 47. STRICT DEVELOPMENT RULES
+
+1. Inspect the existing codebase before making changes.
+2. Never overwrite existing functionality without understanding dependencies.
+3. Design the database before coding dependent modules.
+4. Use Laravel migrations and seeders.
+5. Use reusable services and components.
+6. Every button must perform a real action.
+7. Every form must save validated information.
+8. Every dashboard must use real database records.
+9. Never hardcode production data.
+10. Do not create dummy modules.
+11. Maintain prescription history.
+12. Do not silently change prescription values.
+13. Preserve order specifications after confirmation.
+14. Prevent invalid stock transactions.
+15. Use transactions for inventory and payment operations.
+16. Maintain audit history.
+17. Use server-side authorization.
+18. Test each completed workflow.
+19. Maintain project documentation.
+20. Do not claim external integrations work before testing them.
+
+# 48. FINAL ACCEPTANCE CRITERIA
+
+The system is complete only when:
+
+- Company management works.
+- Branch management works.
+- User roles work.
+- Customer CRM works.
+- Prescription management works.
+- Right-eye and left-eye prescription entry works.
+- Eye measurement management works.
+- Frame management works.
+- Lens management works.
+- Contact lens management works.
+- Sunglasses management works.
+- Accessories management works.
+- POS works.
+- Barcode scanning works.
+- Quotation management works.
+- Sales orders work.
+- Laboratory management works.
+- Lens processing works where enabled.
+- Quality inspection works.
+- Fitting management works.
+- Delivery management works.
+- Repair management works.
+- Warranty management works.
+- Returns and refunds work.
+- Inventory works.
+- Purchase management works.
+- Supplier management works.
+- GST billing works with validated configuration.
+- Payments work.
+- Expenses work.
+- Accounting works.
+- Customer portal works.
+- Online store works.
+- Reports work.
+- Notifications work.
+- Security requirements are implemented.
+- Automated tests pass.
+- Installation and deployment documentation is complete.
+
+# 49. FIRST TASK — START DEVELOPMENT
+
+Before writing code:
+
+1. Analyze the complete requirements.
+2. Design the application architecture.
+3. Separate retail, prescription, laboratory, and accounting workflows.
+4. Design the complete database.
+5. Prepare the ER diagram.
+6. Define the prescription data model.
+7. Define the eye measurement data model.
+8. Define the product and inventory model.
+9. Define the optical sales order lifecycle.
+10. Define laboratory processing.
+11. Define quality control.
+12. Define billing and accounting.
+13. Prepare the development roadmap.
+14. Prepare the testing strategy.
+
+Present the architecture and database plan first.
+
+Then immediately begin implementing Phase 1.
+
+Do not stop after preparing documentation or dashboard mockups.
+
+Continue implementing each module, connecting it to the database, and testing actual workflows.
+
+FINAL OBJECTIVE:
+
+Build a commercially usable Optical Store Management ERP that enables optical businesses to manage customers, prescriptions, eye measurements, frames, lenses, contact lenses, sunglasses, POS sales, quotations, optical orders, laboratory processing, quality control, fitting, delivery, inventory, suppliers, warranty, repairs, payments, accounting, and multi-branch operations from one unified platform.
