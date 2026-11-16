@@ -34,3 +34,4 @@ class AuthController extends Controller
             ->with('success', 'Logged in as ' . $user->name . ' (' . ucfirst($user->role) . ')');
     }
 }
+
