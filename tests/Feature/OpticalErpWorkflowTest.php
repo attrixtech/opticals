@@ -33,8 +33,8 @@ class OpticalErpWorkflowTest extends TestCase
         parent::setUp();
 
         $this->company = Company::create([
-            'name' => 'VisionCraft Test HQ',
-            'code' => 'VC-TEST',
+            'name' => 'thrumble.opticals Test HQ',
+            'code' => 'TO-TEST',
             'state_code' => '27',
             'gstin' => '27AAACV1234F1Z5',
         ]);
@@ -109,7 +109,7 @@ class OpticalErpWorkflowTest extends TestCase
     {
         $response = $this->get(route('dashboard'));
         $response->assertStatus(200);
-        $response->assertSee('VisionCraft');
+        $response->assertSee('thrumble.opticals');
         $response->assertSee('Sales');
     }
 

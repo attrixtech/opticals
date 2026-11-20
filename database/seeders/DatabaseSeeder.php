@@ -40,9 +40,9 @@ class DatabaseSeeder extends Seeder
     {
         // 1. Company Profile
         $company = Company::create([
-            'name' => 'VisionCraft Optical Superstore Pvt Ltd',
-            'code' => 'VC-HQ',
-            'email' => 'contact@visioncraftoptical.com',
+            'name' => 'thrumble.opticals',
+            'code' => 'TO-HQ',
+            'email' => 'contact@thrumble.opticals',
             'phone' => '+91 98200 12345',
             'gstin' => '27AAACV1234F1Z5',
             'pan' => 'AAACV1234F',
@@ -56,7 +56,7 @@ class DatabaseSeeder extends Seeder
             'bank_name' => 'HDFC Bank',
             'bank_account_no' => '50200012345678',
             'bank_ifsc' => 'HDFC0000123',
-            'invoice_prefix' => 'VC-MUM-',
+            'invoice_prefix' => 'TO-MUM-',
             'is_active' => true,
         ]);
 
@@ -66,7 +66,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Mumbai Flagship & Surfacing Lab',
             'code' => 'MUM-01',
             'phone' => '+91 22 2490 8899',
-            'email' => 'mumbai@visioncraftoptical.com',
+            'email' => 'mumbai@thrumble.opticals',
             'gstin' => '27AAACV1234F1Z5',
             'state_code' => '27',
             'address' => 'Phoenix Millennium Mall, Lower Parel',
@@ -83,7 +83,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Pune Koregaon Park Boutique',
             'code' => 'PUN-01',
             'phone' => '+91 20 2615 4433',
-            'email' => 'pune@visioncraftoptical.com',
+            'email' => 'pune@thrumble.opticals',
             'gstin' => '27AAACV1234F1Z5',
             'state_code' => '27',
             'address' => 'North Main Road, Koregaon Park',
@@ -118,8 +118,8 @@ class DatabaseSeeder extends Seeder
 
         // 4. Users with Roles
         $admin = User::create([
-            'name' => 'Paban Bhuyan (Super Admin)',
-            'email' => 'admin@opticalerp.test',
+            'name' => 'thrumble.opticals Admin (Super Admin)',
+            'email' => 'admin@thrumble.opticals',
             'password' => Hash::make('Password@123'),
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
@@ -130,7 +130,7 @@ class DatabaseSeeder extends Seeder
 
         $manager = User::create([
             'name' => 'Rajesh Sharma (Store Manager)',
-            'email' => 'manager@opticalerp.test',
+            'email' => 'manager@thrumble.opticals',
             'password' => Hash::make('Password@123'),
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
@@ -141,7 +141,7 @@ class DatabaseSeeder extends Seeder
 
         $optometrist = User::create([
             'name' => 'Dr. Ananya Deshmukh, M.Optom',
-            'email' => 'optom@opticalerp.test',
+            'email' => 'optom@thrumble.opticals',
             'password' => Hash::make('Password@123'),
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
@@ -152,7 +152,7 @@ class DatabaseSeeder extends Seeder
 
         $labTech = User::create([
             'name' => 'Suresh Patil (Senior Edging Technician)',
-            'email' => 'lab@opticalerp.test',
+            'email' => 'lab@thrumble.opticals',
             'password' => Hash::make('Password@123'),
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
@@ -163,7 +163,7 @@ class DatabaseSeeder extends Seeder
 
         $cashier = User::create([
             'name' => 'Pooja Kulkarni (POS Cashier)',
-            'email' => 'cashier@opticalerp.test',
+            'email' => 'cashier@thrumble.opticals',
             'password' => Hash::make('Password@123'),
             'company_id' => $company->id,
             'branch_id' => $branchMumbai->id,
@@ -567,7 +567,7 @@ class DatabaseSeeder extends Seeder
             'prescription_date' => now()->subDays(5)->toDateString(),
             'expiry_date' => now()->addYear()->toDateString(),
             'doctor_name' => 'Dr. Ananya Deshmukh',
-            'clinic_hospital' => 'VisionCraft Optometry Clinic',
+            'clinic_hospital' => 'thrumble.opticals Optometry Clinic',
             'prescription_type' => 'single_vision',
             'od_sph' => -1.75,
             'od_cyl' => -0.50,
@@ -598,7 +598,7 @@ class DatabaseSeeder extends Seeder
             'prescription_date' => now()->subDays(1)->toDateString(),
             'expiry_date' => now()->addYear()->toDateString(),
             'doctor_name' => 'Dr. Ananya Deshmukh',
-            'clinic_hospital' => 'VisionCraft Optometry Clinic',
+            'clinic_hospital' => 'thrumble.opticals Optometry Clinic',
             'prescription_type' => 'progressive',
             'od_sph' => 1.00,
             'od_cyl' => -0.25,

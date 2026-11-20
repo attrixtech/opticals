@@ -18,7 +18,7 @@
         <!-- Header -->
         <div class="flex justify-between items-start pb-6 border-b-2 border-slate-900">
             <div>
-                <h1 class="text-2xl font-black text-slate-900 tracking-tight">VisionCraft Optical Superstore Pvt Ltd</h1>
+                <h1 class="text-2xl font-black text-slate-900 tracking-tight">thrumble.opticals</h1>
                 <p class="text-xs text-slate-600 mt-1 max-w-sm">
                     Shop 12-14, Ground Floor, Phoenix Millennium Mall, Lower Parel, Mumbai, Maharashtra 400013
                 </p>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="text-right flex flex-col justify-between items-end">
-                <span class="font-bold text-slate-900 text-xs">For VisionCraft Optical Superstore Pvt Ltd</span>
+                <span class="font-bold text-slate-900 text-xs">For thrumble.opticals</span>
                 <div class="mt-10 border-t border-slate-400 w-44 text-center pt-1 text-[10px] uppercase font-bold text-slate-500">
                     Authorized Signatory
                 </div>

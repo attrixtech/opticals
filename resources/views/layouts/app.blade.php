@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ $title ?? 'WebotApp OpticalERP' }} | Optical Store Management ERP</title>
+    <title>{{ $title ?? 'thrumble.opticals' }} | thrumble.opticals</title>
     
     <!-- Google Fonts & Tailwind CDN -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -68,8 +68,8 @@
                     </svg>
                 </div>
                 <div>
-                    <span class="font-extrabold text-white text-sm tracking-tight">WebotApp VisionCraft</span>
-                    <span class="block text-[10px] uppercase tracking-wider text-teal-400 font-bold">OpticalERP</span>
+                    <span class="font-extrabold text-white text-sm tracking-tight">thrumble.opticals</span>
+                    <span class="block text-[10px] uppercase tracking-wider text-teal-400 font-bold">Optical ERP</span>
                 </div>
             </div>
 
@@ -267,6 +267,16 @@
                 {{ $slot ?? '' }}
                 @yield('content')
             </main>
+
+            <!-- Footer Credits -->
+            <footer class="bg-white border-t border-slate-200/80 px-8 py-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 flex-shrink-0 print:hidden">
+                <div class="font-semibold text-slate-700">&copy; {{ date('Y') }} thrumble.opticals</div>
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                    <span>Developed by <a href="https://www.attrixtech.com" target="_blank" rel="noopener noreferrer" class="font-semibold text-blue-600 hover:text-blue-700 hover:underline">Attrix Technologies</a></span>
+                    <span class="text-slate-300">|</span>
+                    <span>Marketing by <a href="https://www.infusionn.in" target="_blank" rel="noopener noreferrer" class="font-semibold text-teal-600 hover:text-teal-700 hover:underline">Infusionn Pvt. Ltd.</a></span>
+                </div>
+            </footer>
         </div>
     </div>
 

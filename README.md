@@ -1,16 +1,15 @@
-# WebotApp OpticalERP — Enterprise Optical Store Management ERP
+# thrumble.opticals — Enterprise Optical Store Management ERP
 
-> **Software Name:** WebotApp OpticalERP (VisionCraft Edition)  
-> **Repository:** [https://github.com/webotapp-academy/WebotApp-OpticalERP](https://github.com/webotapp-academy/WebotApp-OpticalERP)  
+> **Software Name:** thrumble.opticals  
 > **Stack:** Laravel 13 (PHP 8.4) • Livewire 4 • Tailwind CSS • Alpine.js • MySQL 8 / MariaDB
 
 ---
 
 ## 📖 Software Description
 
-**WebotApp OpticalERP** is an enterprise-grade, multi-branch, multi-warehouse Enterprise Resource Planning (ERP) platform designed specifically for the optical retail, spectacle manufacturing, and optometry ecosystem in India and global markets.
+**thrumble.opticals** is an enterprise-grade, multi-branch, multi-warehouse Enterprise Resource Planning (ERP) platform designed specifically for the optical retail, spectacle manufacturing, and optometry ecosystem in India and global markets.
 
-Unlike generic POS systems, **WebotApp OpticalERP** manages the complete optical lifecycle:
+Unlike generic POS systems, **thrumble.opticals** manages the complete optical lifecycle:
 
 ```mermaid
 flowchart LR
@@ -83,8 +82,8 @@ flowchart LR
 ### Installation
 ```bash
 # 1. Clone repository
-git clone https://github.com/webotapp-academy/WebotApp-OpticalERP.git
-cd WebotApp-OpticalERP
+git clone <repository-url>
+cd opticals
 
 # 2. Install dependencies
 composer install
@@ -108,11 +107,11 @@ php artisan serve
 
 | Role | Email | Password |
 |---|---|---|
-| **Super Admin / Owner** | `admin@opticalerp.test` | `Password@123` |
-| **Store Manager** | `manager@opticalerp.test` | `Password@123` |
-| **Optometrist** | `optom@opticalerp.test` | `Password@123` |
-| **Lab Technician** | `lab@opticalerp.test` | `Password@123` |
-| **POS Cashier** | `cashier@opticalerp.test` | `Password@123` |
+| **Super Admin / Owner** | `admin@thrumble.opticals` | `Password@123` |
+| **Store Manager** | `manager@thrumble.opticals` | `Password@123` |
+| **Optometrist** | `optom@thrumble.opticals` | `Password@123` |
+| **Lab Technician** | `lab@thrumble.opticals` | `Password@123` |
+| **POS Cashier** | `cashier@thrumble.opticals` | `Password@123` |
 
 ---
 
@@ -123,3 +122,10 @@ Execute the test suites:
 php artisan test
 ```
 All 16 test suites covering clinical calculations, Indian GST splitting, POS ordering, lab workflows, QC sign-off, and role-based dashboards pass with 60 assertions.
+
+---
+
+## 🙌 Credits
+
+- **Development:** [Attrix Technologies](https://www.attrixtech.com)
+- **Marketing:** [Infusionn Pvt. Ltd.](https://www.infusionn.in)

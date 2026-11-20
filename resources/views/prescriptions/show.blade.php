@@ -26,7 +26,7 @@
             <div>
                 <div class="flex items-center gap-2">
                     <span class="w-3 h-3 rounded-full bg-blue-600"></span>
-                    <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">VisionCraft Optometry Clinic</h2>
+                    <h2 class="text-xl font-extrabold text-slate-900 tracking-tight">thrumble.opticals Optometry Clinic</h2>
                 </div>
                 <p class="text-xs text-slate-500 mt-1">Lower Parel Flagship • Reg: 27AAACV1234F1Z5</p>
             </div>

@@ -2,7 +2,7 @@
 
 ## 1. Environment Configuration (.env)
 ```env
-APP_NAME="VisionCraft Optical ERP"
+APP_NAME="thrumble.opticals"
 APP_ENV=production
 APP_DEBUG=false
 APP_URL=https://optical.yourdomain.com

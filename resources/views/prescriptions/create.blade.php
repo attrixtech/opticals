@@ -51,7 +51,7 @@
 
             <div>
                 <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Clinic / Hospital Name</label>
-                <input type="text" name="clinic_hospital" value="VisionCraft Optometry Clinic" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
+                <input type="text" name="clinic_hospital" value="thrumble.opticals Optometry Clinic" class="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm font-medium focus:ring-2 focus:ring-blue-500 focus:bg-white transition">
             </div>
 
             <div>

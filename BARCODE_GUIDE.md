@@ -9,7 +9,7 @@ The ERP supports:
 ## 2. Spectacle Frame Barcode Label Specifications
 - **Recommended Label Dimensions**: 70mm x 15mm or "Dumbbell" butterfly labels that loop around the temple/arm of the spectacle frame without leaving adhesive residue on acetate or titanium.
 - **Label Contents**:
-  - Top Line: Store / Brand Name (e.g., `VisionCraft`)
+  - Top Line: Store / Brand Name (e.g., `thrumble.opticals`)
   - Center: 1D Barcode (Code 128)
   - Bottom Line Left: Model / Color Code (e.g., `RX5184 BLK`)
   - Bottom Line Right: MRP / Selling Price (e.g., `₹5,890.00`)

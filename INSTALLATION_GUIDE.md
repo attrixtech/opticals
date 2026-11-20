@@ -54,9 +54,9 @@
    Or access directly via XAMPP Apache: `http://localhost/optical/public`
 
 ## Default Administrative Credentials
-- **Super Administrator**: `admin@opticalerp.test` / `Password@123`
-- **Store Manager**: `manager@opticalerp.test` / `Password@123`
-- **Optometrist**: `optom@opticalerp.test` / `Password@123`
-- **Lab Technician**: `lab@opticalerp.test` / `Password@123`
-- **Cashier**: `cashier@opticalerp.test` / `Password@123`
+- **Super Administrator**: `admin@thrumble.opticals` / `Password@123`
+- **Store Manager**: `manager@thrumble.opticals` / `Password@123`
+- **Optometrist**: `optom@thrumble.opticals` / `Password@123`
+- **Lab Technician**: `lab@thrumble.opticals` / `Password@123`
+- **Cashier**: `cashier@thrumble.opticals` / `Password@123`
 

@@ -25,8 +25,8 @@ class DashboardController extends Controller
             $defaultUser = User::where('role', 'admin')->first() ?? User::first();
             if (!$defaultUser) {
                 $defaultUser = User::create([
-                    'name' => 'WebotApp Admin',
-                    'email' => 'admin@webotapp.test',
+                    'name' => 'thrumble.opticals Admin',
+                    'email' => 'admin@thrumble.opticals',
                     'password' => bcrypt('secret'),
                     'role' => 'admin',
                 ]);
