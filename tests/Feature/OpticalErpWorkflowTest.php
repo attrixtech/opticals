@@ -105,9 +105,50 @@ class OpticalErpWorkflowTest extends TestCase
         ]);
     }
 
-    public function test_dashboard_renders_successfully(): void
+    public function test_guest_is_redirected_to_login(): void
     {
         $response = $this->get(route('dashboard'));
+        $response->assertRedirect(route('login'));
+    }
+
+    public function test_login_page_renders_with_quick_fill_links(): void
+    {
+        $response = $this->get(route('login'));
+        $response->assertStatus(200);
+        $response->assertSee('thrumble.opticals');
+        $response->assertSee('admin@thrumble.opticals');
+        $response->assertSee('fillCredentials');
+    }
+
+    public function test_user_can_login_and_logout(): void
+    {
+        $response = $this->post(route('login.attempt'), [
+            'email' => 'admin@test.test',
+            'password' => 'secret',
+        ]);
+
+        $response->assertRedirect(route('dashboard'));
+        $this->assertAuthenticatedAs($this->user);
+
+        $logoutResponse = $this->post(route('logout'));
+        $logoutResponse->assertRedirect(route('login'));
+        $this->assertGuest();
+    }
+
+    public function test_invalid_login_fails(): void
+    {
+        $response = $this->post(route('login.attempt'), [
+            'email' => 'admin@test.test',
+            'password' => 'wrong-password',
+        ]);
+
+        $response->assertSessionHasErrors('email');
+        $this->assertGuest();
+    }
+
+    public function test_dashboard_renders_successfully(): void
+    {
+        $response = $this->actingAs($this->user)->get(route('dashboard'));
         $response->assertStatus(200);
         $response->assertSee('thrumble.opticals');
         $response->assertSee('Sales');
@@ -115,7 +156,7 @@ class OpticalErpWorkflowTest extends TestCase
 
     public function test_customer_creation(): void
     {
-        $response = $this->post(route('customers.store'), [
+        $response = $this->actingAs($this->user)->post(route('customers.store'), [
             'name' => 'Sunita Sharma',
             'phone' => '+91 98333 44556',
             'gender' => 'female',
@@ -133,7 +174,7 @@ class OpticalErpWorkflowTest extends TestCase
 
     public function test_prescription_creation_and_refraction(): void
     {
-        $response = $this->post(route('prescriptions.store'), [
+        $response = $this->actingAs($this->user)->post(route('prescriptions.store'), [
             'customer_id' => $this->customer->id,
             'prescription_date' => now()->toDateString(),
             'prescription_type' => 'single_vision',
@@ -168,7 +209,7 @@ class OpticalErpWorkflowTest extends TestCase
         ]);
 
         // 2. Submit POS Order with Frame and Lenses
-        $response = $this->post(route('pos.store'), [
+        $response = $this->actingAs($this->user)->post(route('pos.store'), [
             'customer_id' => $this->customer->id,
             'prescription_id' => $rx->id,
             'items' => [
@@ -246,7 +287,7 @@ class OpticalErpWorkflowTest extends TestCase
             'stage' => 'qc_pending',
         ]);
 
-        $response = $this->post(route('laboratory.qc', $job->id), [
+        $response = $this->actingAs($this->user)->post(route('laboratory.qc', $job->id), [
             'qc_status' => 'passed',
             'check_lens_power_sph_cyl_axis' => 1,
             'check_optical_center_pd' => 1,
@@ -343,7 +384,7 @@ class OpticalErpWorkflowTest extends TestCase
             'role' => 'lab_technician',
         ]);
 
-        $response = $this->get(route('auth.switch', 'lab_technician'));
+        $response = $this->actingAs($this->user)->get(route('auth.switch', 'lab_technician'));
         $response->assertStatus(302);
         $response->assertRedirect(route('dashboard'));
 

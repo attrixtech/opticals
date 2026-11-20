@@ -183,7 +183,7 @@
             </nav>
 
             <!-- User Status Footer -->
-            <div class="p-3 bg-slate-950/80 border-t border-slate-800/80 flex items-center justify-between">
+            <div class="p-3 bg-slate-950/80 border-t border-slate-800/80 flex items-center justify-between gap-2">
                 <div class="flex items-center gap-2.5 overflow-hidden">
                     <div class="w-8 h-8 rounded-full bg-blue-500/20 text-blue-400 border border-blue-500/30 flex items-center justify-center font-bold text-xs flex-shrink-0">
                         {{ substr($currentUser->name ?? 'User', 0, 1) }}
@@ -193,6 +193,14 @@
                         <div class="text-[11px] text-teal-400 font-medium capitalize">{{ str_replace('_', ' ', $currentUser->role) }}</div>
                     </div>
                 </div>
+                <form method="POST" action="{{ route('logout') }}" class="flex-shrink-0">
+                    @csrf
+                    <button type="submit" title="Sign Out" class="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition cursor-pointer">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                        </svg>
+                    </button>
+                </form>
             </div>
         </aside>
 

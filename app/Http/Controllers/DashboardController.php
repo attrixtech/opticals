@@ -20,20 +20,6 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        // Auto-authenticate default admin if not authenticated
-        if (!Auth::check()) {
-            $defaultUser = User::where('role', 'admin')->first() ?? User::first();
-            if (!$defaultUser) {
-                $defaultUser = User::create([
-                    'name' => 'thrumble.opticals Admin',
-                    'email' => 'admin@thrumble.opticals',
-                    'password' => bcrypt('secret'),
-                    'role' => 'admin',
-                ]);
-            }
-            Auth::login($defaultUser);
-        }
-
         $user = Auth::user();
         $today = now()->toDateString();
 
